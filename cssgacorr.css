@@ -1,45 +1,66 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
 body {
     background-color: #111;
     font-family: Arial, sans-serif;
     color: #fff;
-    margin: 0;
-    padding: 0;
 }
 
-/* Header */
-header {
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+/* HEADER */
+.header {
     text-align: center;
-    padding: AUTO;
-    background-color: #000000;
-    color: #FFD700;
-    font-size: 25px;
+    background-color: #000;
+    padding: 20px;
     border-radius: 15px;
 }
 
-/* Membuat kotak dengan sudut halus untuk seluruh konten */
-.content-box {
-    max-width: 1100px;
-    margin: 30px auto;
-    background-color: #222222;
-    padding: 30px;
-    border-radius: 15px; /* Sudut halus */
-    box-shadow: 0 0 20px rgba(255, 238, 0, 0.5); /* Bayangan */
+.logo {
+    max-width: 350px;
+    margin: auto;
+    display: block;
 }
 
-.main-content {
+.tagline {
+    color: #ffd700;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+/* CONTENT BOX */
+.content-box {
+    background-color: #222;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 217, 0, 0.5);
     text-align: center;
 }
 
-/* Gaya untuk gambar di dalam konten */
+/* IMAGE */
 .image-container img {
-    width: 500px;
-    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
 }
 
+/* TEXT */
 .text-container h2 {
-    font-size: 28px;
     color: #ffd900;
-    margin-top: 50px;
+    font-size: 26px;
+    margin-top: 30px;
 }
 
 .text-container p {
@@ -47,18 +68,19 @@ header {
     margin-top: 10px;
 }
 
+/* BUTTONS */
 .buttons {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .btn {
-    padding: 20px 60px;
-    border: none;
+    display: inline-block;
+    padding: 15px 50px;
+    font-size: 18px;
     border-radius: 10px;
-    font-size: 20px;
-    cursor: pointer;
+    text-decoration: none;
     margin: 10px;
-    transition: background-color 0.3s ease;
+    transition: 0.3s;
 }
 
 .login-btn {
@@ -67,7 +89,7 @@ header {
 }
 
 .login-btn:hover {
-    background-color: #7c660c;
+    background-color: #bfa800;
 }
 
 .daftar-btn {
@@ -76,22 +98,31 @@ header {
 }
 
 .daftar-btn:hover {
-    background-color: #86291e;
+    background-color: #a83226;
 }
 
-footer {
-    text-align: center;
-    background-color: #000;
-    color: #fff;
-    padding: auto;
+/* FOOTER FIXED */
+.footer {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: #000;
+    font-size: 14px;
+    z-index: 9999;
 }
-/* Gaya untuk logo di header */
-.logo {
-    max-width: 400px;  
-    height: auto;     
-    display: block;
-    margin:  auto;   
+
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .text-container h2 {
+        font-size: 22px;
+    }
+
+    .btn {
+        padding: 12px 35px;
+        font-size: 16px;
+    }
 }
